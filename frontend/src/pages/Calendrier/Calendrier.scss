@@ -1,0 +1,134 @@
+.calendrier{
+    margin: 10px;
+    border: 1px solid #b6acac;
+    // display: flex;
+    // align-items: center;
+       
+    h3{
+        text-align: center;
+        font-size: 21px;
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+    }
+  
+        span{
+            color: #6f48eb;
+        }
+    
+    .calendar-container{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-evenly;
+        // gap: 20px;
+      
+        .user{
+            .login_form{
+              
+                flex-direction: column;      
+            
+              width: 450px;
+              label{
+                padding-bottom: 20px;
+                background-color: #6b4dd6;
+               color: white;
+               font-size: 20px;
+               border-radius: 5px;
+              }
+                input{
+                 width: 100%;
+                 padding: 7px;
+                 border: none;
+                 border: 1px solid #9f9c9c;
+                 border-radius: 10px;
+                 color: black;
+                 font-size: 1em;
+                 margin-bottom: 20px;
+                 outline: none;
+                 background-color: #fbf9f9;
+                 
+                }
+                .button{
+                    border: none;
+                    background-color: #6f48eb;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 21px;
+                    color: white;
+                   }
+            }
+        }
+
+        .product_main{
+            width: 50%;
+            .item_main{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #f5f1f1;
+            
+                img{
+                   width: 20%;
+
+                }
+                .detail_main{
+                    h1{
+                        font-size: 18px;
+                        font-weight: 500;
+
+                    }
+                    p{
+                        color: gray;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+
+                    }
+                }
+            }
+        }
+    }
+
+   
+    //    .button{
+    //     border: none;
+    //     background-color: #6f48eb;
+    //     border-radius: 5px;
+    //     margin-bottom: 10px;
+    //     cursor: pointer;
+    //     width: 30%;
+    //     text-align: center;
+    //     font-size: 21px;
+    //     color: white;
+    //    }
+    
+
+
+    .react-calendar { 
+        width: 400px;
+        max-width: 100%;
+        background-color: #fff;
+        color: #222;
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.125em;
+       }
+       .react-calendar__navigation button {
+        color: #6f48eb;
+        min-width: 44px;
+        background: none;
+        font-size: 16px;
+        margin-top: 8px;
+       }
+
+    
+}
+.toast-message {
+    font-size: 26px;
+    width: 40vw;
+    padding: 50px 50px;
+}

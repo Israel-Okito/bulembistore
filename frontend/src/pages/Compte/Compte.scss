@@ -1,0 +1,42 @@
+.compte{
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+    .main1{
+        padding: 15px;
+        border: 1px solid #d6d3d3;
+        width: 20%;
+        .menu-container{
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            gap: 35px;
+            cursor: pointer;
+
+            button{
+             border: none;
+             padding: 10px;
+             border-radius: 5px;
+             background-color: rgb(44, 111, 212);
+             cursor: pointer;
+
+            }
+        }
+    }
+
+    .main2{
+        border: 1px solid #d6d3d3;
+        flex-grow: 2;
+
+        h2{
+            text-align: center;
+            border-bottom: 1px solid #d6d3d3;
+            font-weight: 500;
+            span{
+                color: rgb(29, 86, 218);
+                font-weight: 600;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        }
+    }
+}

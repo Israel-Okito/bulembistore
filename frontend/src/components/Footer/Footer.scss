@@ -1,0 +1,36 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgb(90, 103, 119);
+    color: white;
+    padding: 20px;
+    font-size: 21px;
+    font-weight: 800;
+    
+    .footer_main{
+     display: flex;
+     justify-content: space-between;
+     font-weight: 400;
+     font-size: 18px;
+     .top_main{
+        width: 50%;
+     }
+     .bootom_main{
+        // width: 50%;
+        
+     }
+    }
+
+       p{
+       
+        span{
+            color: rgb(206, 206, 138);
+            font-weight: bold;
+        }
+       }
+   
+      
+   
+}

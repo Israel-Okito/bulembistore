@@ -1,0 +1,46 @@
+.slider{
+
+    .main{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      .desc{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        
+        h3{
+            font-size: 25px;
+            font-weight: 600;
+
+        }
+        p{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        button{
+            font-size: 17px;
+            width: 30%;
+            border: none;
+           border-radius: 20px;
+           padding: 10px;
+           background-color: rgb(226, 226, 165);
+           cursor: pointer;
+           
+        }
+      }
+
+      .images{
+        width: 50%;
+        // display: flex;
+        h3{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        img{
+          width: 550px;
+        }
+      }
+    }
+}

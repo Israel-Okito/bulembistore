@@ -1,0 +1,60 @@
+.categories{
+    .container_title{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(245, 242, 242);
+        font-size: 1.5em;
+    }
+    .container_categories{
+        padding: 5px;
+        display: flex;
+        height: 250px;
+
+        .main11{
+           width: 50%;
+           background-color: rgb(26, 115, 87);
+           padding: 20px;
+
+           h5{
+            font-size: 1.2em;
+            font-weight: 500;
+           }
+           .main121{
+            img{
+
+            }
+            button{
+                padding: 10px;
+                border: none;
+              border-radius: 5px;
+              background-color:rgb(115, 159, 145) ;
+              cursor: pointer;
+            }
+           }
+        }
+
+        .main12{
+            background-color: burlywood;
+            width: 50%;
+            padding: 20px;
+
+            h5{
+                font-size: 1.2em;
+                font-weight: 500;
+               }
+               .main121{
+                img{
+    
+                }
+                button{
+                    padding: 10px;
+                    border: none;
+                  border-radius: 5px;
+                  background-color:rgb(245, 194, 127) ;
+                  cursor: pointer;
+                }
+               }
+        }
+    }
+
+}
