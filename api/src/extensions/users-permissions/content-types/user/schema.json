@@ -66,10 +66,16 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "calendars": {
+    "emprunts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::calendar.calendar",
+      "target": "api::emprunt.emprunt",
+      "mappedBy": "user"
+    },
+    "reservations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reservation.reservation",
       "mappedBy": "user"
     }
   }

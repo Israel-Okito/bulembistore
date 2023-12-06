@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { userData } from '../../helpers';
 import "./Compte.scss"
-import VosReserver from '../../components/Profile/VosReserver';
-import Profile from '../../components/Profile/Profile';
+import VosEmprunt from '../../components/Profile/VosReservation';
+import VosReserver from '../../components/Profile/VosEmprunts';
 
 
 const Compte = () => {
@@ -15,7 +15,6 @@ const Compte = () => {
       
 }
 const {username}= userData()
-const [open,setOpen] = useState(false)
 // const router = useRouter()
 // const isHome = router.pathname === "/"
 // const goBack = (event) => {
@@ -27,36 +26,28 @@ const [open,setOpen] = useState(false)
 //       <a href="#" onClick={goBack}>{"<"} Back </a>
 //   </div>
 // }
-
-
-const [selected, setSelected] = useState('');
-
-const handleChange = (e)=> {
-
-};
+const [click, setClick] = useState(false);
+const [click1, setClick1] = useState(false);
 
 
   return (
     <div className='compte'>
        <div className="main1">
-          <div className='menu-container'>
-            <form action="" value={selected} onChange={handleChange}>
-                <button  value="A" className='link'> Votre compte KinStore</button>
-                <button  value="B"   className='link'>Vos commandes</button>
-                <button   className='link'>Vos Réservation</button>
-                <button   className='link'>Vos favoris</button>
+          <div className='menu-container' >
+                <button  onClick={()=> setClick1(!click1)} className='link'>Vos Emprunts</button> 
+                <button onClick={()=> setClick(!click)}  className='link'>Vos Réservation</button>
+                <button   className='link'>Vos favoris</button> 
                 <button   className='menu-logout' onClick={deconecter}>Se deconnecter</button>     
+      
           
-            </form>
           </div>
         </div>
 
         <div className="main2">
-            <h2>Bienvenue <span>👉️ {username}</span> </h2>
-          <div>
-            {selected && <VosReserver/>}
-            {selected && <Profile/>}
-            
+            <h2>Bienvenue <span>👉️ {username}  </span> </h2>
+          <div className='main3'>
+          {click && <VosEmprunt/>}
+          {click1 && <VosReserver/>}
           </div>
         </div>
     </div>

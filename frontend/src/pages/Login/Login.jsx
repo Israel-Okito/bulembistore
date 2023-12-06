@@ -21,7 +21,7 @@ const Login = () => {
           storeUser(data)
          console.log(data)
           setUser(initialUser)
-          navigate("/")
+          navigate("/compte")
         }
       }
       

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Calendrier.scss'
+import './Reserver.scss'
 import {  useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { userData } from '../../helpers';
@@ -12,7 +12,7 @@ const init = {
   debut:"",
   fin:""
 }
-const Calendrier = () => {
+const Reserve = () => {
   const products = useSelector((state) => state.cart.products);
 const [book, setBook] = useState(init)
     
@@ -21,7 +21,7 @@ const [book, setBook] = useState(init)
     const hanndleClick = async(e)=>{
       e.preventDefault();
     
-      fetch(`${process.env.REACT_APP_API_URL}/emprunts`, {
+      fetch(`${process.env.REACT_APP_API_URL}/reservations`, {
         method: "POST",
         headers: {
           'Content-type': 'application/json',
@@ -31,19 +31,19 @@ const [book, setBook] = useState(init)
       })
       .then((res) => {
        console.log(res)
-       toast(` ${username} Merci de faire un emprunt , votre emprunt est en cours de traitement
-       Remarque: veuillez passer à MIT avec le code de confirmation qu'on vous envoyera à la date prévue pour votre retrait  sinon votre emprunt sera annuler `, {
-         autoClose: 10000,
-         position: toast.POSITION.TOP_CENTER,
-         className: 'toast-message',
-         // hideProgressBar:true,
-       });
-     })
+      toast(` ${username} Merci de reserver , votre reservation est en cours de traitement
+        Remarque: veuillez passer à MIT avec le code de confirmation qu'on vous envoyera à la date prévue pour votre reservation sinon votre reservation sera annuler `, {
+          autoClose: 10000,
+          position: toast.POSITION.TOP_CENTER,
+          className: 'toast-message',
+          // hideProgressBar:true,
+      });
+      })
     }
 const {username}= userData()
   return (
   <div className='calendrier'>
-       <h3>salut <span>{username}</span> vous pouvez completé ces informations pour faire un emprunt</h3>
+       <h3>salut <span>{username}</span> vous pouvez compléter ces informations pour faire une reservation</h3>
       <div className='calendar-container'>
             <div className='user'>
 
@@ -72,7 +72,7 @@ const {username}= userData()
                onChange={e => setBook({...book,desc: e.target.value})}
                placeholder="Quelle est le nom du livre choisi ?"
              />
-                 <label htmlFor="">la date  de l'emprunt du livre: </label>
+                 <label htmlFor="">la date de la reservation du livre: </label>
              
                <input type="date" 
                   name="debut"  
@@ -81,7 +81,7 @@ const {username}= userData()
                   onChange={e => setBook({...book, debut: e.target.value})}
 
                />
-               <label htmlFor="">la date de retour de l'emprunt du livre :</label>
+               <label htmlFor="">la date de retour de la reservation du livre :</label>
                <input type="date" 
                   name="fin"  
                   // onChange={handleChange}
@@ -89,7 +89,7 @@ const {username}= userData()
                   onChange={e => setBook({...book, fin: e.target.value})}
 
                />
-                 <button  className='button'>Valider</button>
+                 <button  className='button'>reserver</button>
 
           </form>
 
@@ -112,4 +112,4 @@ const {username}= userData()
   )
 }
 
-export default Calendrier
+export default Reserve

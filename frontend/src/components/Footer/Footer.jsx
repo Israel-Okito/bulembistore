@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
         
-   < p >MitBook  &copy; copyright 2023  All Rights Reserved <span>dévéloppeur ISRAEL OKITO</span></p>
+   < p >MitBook  &copy; copyright 2023  All Rights Reserved <span>développer par GRACE BULEMBI</span></p>
 
 
 

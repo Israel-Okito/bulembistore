@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * calendar router
+ * reservation router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::calendar.calendar');
+module.exports = createCoreRouter('api::reservation.reservation');

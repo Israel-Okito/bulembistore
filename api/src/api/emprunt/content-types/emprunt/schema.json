@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "calendars",
+  "collectionName": "emprunts",
   "info": {
-    "singularName": "calendar",
-    "pluralName": "calendars",
-    "displayName": "Calendar"
+    "singularName": "emprunt",
+    "pluralName": "emprunts",
+    "displayName": "Emprunt",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,10 +28,19 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "calendars"
+      "inversedBy": "emprunts"
     },
     "desc": {
       "type": "text"
+    },
+    "confirmation": {
+      "type": "text"
+    },
+    "encours": {
+      "type": "string"
+    },
+    "annuler": {
+      "type": "string"
     }
   }
 }

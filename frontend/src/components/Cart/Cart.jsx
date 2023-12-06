@@ -5,6 +5,7 @@ import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { makeRequest } from "../../makeRequest";
 import { loadStripe } from "@stripe/stripe-js";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
@@ -45,8 +46,8 @@ const Cart = () => {
             <h1>{item.title}</h1>
             <p>{item.desc?.substring(0, 60)} ...</p>
             <div className="price">
-             Qté:  {item.quantity} <br/>
-             Prix: TND{item.price}
+             {/* Qté:  {item.quantity} <br/>
+             Prix: TND{item.price} */}
             </div>
           </div>
           <p
@@ -57,11 +58,19 @@ const Cart = () => {
         
         </div>
       ))}
-      <div className="total">
+      {/* <div className="total">
         <span>Total</span>
         <span>TND{totalPrice()}</span>
+      </div> */}
+      {/* <button onClick={handlePayment}>Procéder à l'achat</button> */}
+      <div className="total_main">
+      <Link to='/reserver'>
+        <button className="link">Reserver</button>
+        </Link>
+        <Link to='/calendrier'>
+        <button className="link">Emprunter</button>
+        </Link>
       </div>
-      <button onClick={handlePayment}>Procéder à l'achat</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
         Actualier le panier
       </span>

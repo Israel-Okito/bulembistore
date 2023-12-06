@@ -2,10 +2,16 @@
     display: flex;
     padding: 40px;
     gap: 20px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.600),rgb(3, 2, 2)), url("../../../public/img/bi5.jpg");
+   background-size: cover;
+   background-position: center;
+      
     .main1{
         padding: 15px;
         border: 1px solid #d6d3d3;
         width: 20%;
+        
+        background-color: rgb(226, 226, 226);
         .menu-container{
             display: flex;
             flex-direction: column;
@@ -27,16 +33,23 @@
     .main2{
         border: 1px solid #d6d3d3;
         flex-grow: 2;
-
+        color: white;
+        // background-color: rgb(226, 226, 226);
         h2{
             text-align: center;
             border-bottom: 1px solid #d6d3d3;
             font-weight: 500;
             span{
-                color: rgb(29, 86, 218);
+                // color: rgb(29, 86, 218);
+               color: #a9eee8;
                 font-weight: 600;
                 font-family: 'Courier New', Courier, monospace;
             }
         }
+    }
+    .main3{
+        // display: flex;
+        // align-items: center;
+        // flex-direction: column;
     }
 }

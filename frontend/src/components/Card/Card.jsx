@@ -26,8 +26,8 @@ const Card = ({ item }) => {
         
         </div>
         <h2>{item?.attributes.title}</h2>
-        <h4>{item?.attributes.desc.substring(0, 50)}</h4>
-        <h3>TND{item?.attributes.price}</h3>
+        <h4>{item?.attributes.desc.substring(0, 50)}...</h4>
+        {/* <h3>TND{item?.attributes.price}</h3> */}
        
         </div>
       </div>

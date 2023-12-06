@@ -20,7 +20,7 @@ const Navbar = () => {
   const [open,setOpen] = useState(false)
   const products = useSelector(state=>state.cart.products);
   // const navigate = useNavigate()
-  // const [user, setUser] = useState(false)
+  const [loading, setLoading] = useState(false)
   // const [name, setName] = useState('')
 
 
@@ -49,9 +49,8 @@ const {username} =userData()
 
         
         <div className="icons">
-        <FontAwesomeIcon icon={ faHeart} style={{color:"red"}} /><p>Favoris</p>      
-        {
-          
+        <FontAwesomeIcon icon={ faHeart} style={{color:"blue"}} /><p>Favoris</p>      
+        { 
           username ? ( 
             <>
             <Link to="/compte" className='link' >Bienvenue <span style={{color:"blue", fontSize:"23px"}} >{username}</span></Link>{' '}

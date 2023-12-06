@@ -1,8 +1,12 @@
 .calendrier{
+    // background-image: url("../../../public/img/bi7.webp");
+    // background-size: cover;
+    // background-position: center;
     margin: 10px;
     border: 1px solid #b6acac;
     // display: flex;
     // align-items: center;
+   
        
     h3{
         text-align: center;
@@ -21,8 +25,13 @@
         padding: 20px;
         justify-content: space-evenly;
         // gap: 20px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.497),rgb(36, 24, 24)), url("../../../public/img/bi6.jpg");
+        background-size: cover;
+       background-position: center;
       
         .user{
+       
+           
             .login_form{
               
                 flex-direction: column;      
@@ -64,6 +73,9 @@
 
         .product_main{
             width: 50%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
             .item_main{
                 display: flex;
                 align-items: center;

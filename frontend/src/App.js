@@ -10,6 +10,9 @@ import Inscription from "./pages/Inscription/Inscription"
 import Products from "./pages/Products/Products";
 import Calendrier from "./pages/Calendrier/Calendrier";
 import Compte from "./pages/Compte/Compte";
+import Reserve from "./pages/Reserve/Reserve";
+import { ToastContainer } from "react-toastify";
+import { Protector } from "./helpers";
 const Layout = () =>{
   return(
     <div className="app">
@@ -42,24 +45,25 @@ const router = createBrowserRouter([
         path:'/login' ,
         element:<Login /> ,
       },
+    
       {
         path:'/inscription' ,
         element:<Inscription />,
       },
       {
         path:'/calendrier' ,
-        element:<Calendrier />,
+        element:<Protector Component={Calendrier} />,
       },
       {
-        path:'/compte' ,
-        element:<Compte />,
+        path:'/reserver' ,
+        element:<Protector Component={Reserve}/>,
+      },
       
-      }
-      // {
-      //   path:'/compte' ,
-      //   element:<Protector Component={Compte}/>,
+      {
+        path:'/compte' ,
+        element:<Protector Component={Compte}/>,
         
-      //  },
+       },
 
     ],
     
@@ -70,7 +74,7 @@ function App() {
     <div>
       
        <RouterProvider router={router}/> 
-
+      <ToastContainer/>
      
     </div>
   );

@@ -32,7 +32,7 @@ const Products = () => {
     <div className="products">
       <div className="left">
         <div className="filterItem">
-          <h2> Categories de produits</h2>
+          <h2> Categories de livres</h2>
           {data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input
@@ -46,7 +46,7 @@ const Products = () => {
           ))}
         </div>
         <div className="filterItem">
-          <h2>Filtre par prix</h2>
+          {/* <h2>Filtre par prix</h2>
           <div className="inputItem">
             <span>0</span>
             <input
@@ -56,11 +56,11 @@ const Products = () => {
               onChange={(e) => setMaxPrice(e.target.value)}
             />
             <span>{maxPrice}</span>
-          </div>
+          </div> */}
         </div>
         <div className="filterItem">
-          <h2>Trier par</h2>
-          <div className="inputItem">
+          {/* <h2>Trier par</h2> */}
+          {/* <div className="inputItem">
             <input
               type="radio"
               id="asc"
@@ -69,8 +69,8 @@ const Products = () => {
               onChange={(e) => setSort("asc")}
             />
             <label htmlFor="asc" >Prix (Le plus petit au plus grand )</label>
-          </div>
-          <div className="inputItem">
+          </div> */}
+          {/* <div className="inputItem">
             <input
               type="radio"
               id="desc"
@@ -79,11 +79,11 @@ const Products = () => {
               onChange={(e) => setSort("desc")}
             />
             <label htmlFor="desc">Prix (Le plus grand au plus petit)</label>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="right">
-         <p      className="catImg"> </p>
+         <p      className="catImg"></p>
         <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
       </div>
     </div>

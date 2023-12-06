@@ -32,26 +32,28 @@ const Product =()=> {
        </div>
        <div className="right">
          <h1>{data?.attributes?.title} </h1>
-         <span className='price'>TND{data?.attributes?.price} </span>
+         {/* <span className='price'>TND{data?.attributes?.price} </span> */}
          <p>{data?.attributes?.desc} </p>
-         <div className="quantity">
+         {/* <div className="quantity">
           Quantité :
            <button onClick={()=>setQuantity(prev=>prev===1 ? 1 : prev -1)}>-</button>
            {quantity}
            <button onClick={()=>setQuantity(prev=>prev+1)}>+</button>
-         </div>
+         </div> */}
          <div  className="add">
           
+        <Link to="/reserver " className='link'>
          <button onClick={()=>dispatch(addToCart({
            id:data.id,
            title:data.attributes.title,
            desc:data.attributes.desc,
-           price:data.attributes.price,
+          //  price:data.attributes.price,
            img:data.attributes.img.data.attributes.url,
            quantity
          }))}>
-                    Ajouter au panier 
+                   Reserver un livre
          </button>
+        </Link>
          
        <Link to="/calendrier"  className='link'>
 
@@ -59,11 +61,11 @@ const Product =()=> {
            id:data.id,
            title:data.attributes.title,
            desc:data.attributes.desc,
-           price:data.attributes.price,
+          //  price:data.attributes.price,
            img:data.attributes.img.data.attributes.url,
            quantity
          }))} >
-             Reserver un livre</button>
+             Emprunter un livre</button>
 
        </Link>
          </div>
@@ -73,7 +75,7 @@ const Product =()=> {
             </div>
             <hr />
             <div className="item">
-              Pour une réclamation contactez-nous
+              contactez-nous
             </div>
          </div>
        
